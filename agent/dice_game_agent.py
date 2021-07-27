@@ -7,6 +7,7 @@ class DiceGameAgent:
         """
         self.game = game
 
+        # these values were chosen through trial and error
         self.__theta = 0.001 # controls when policy iteration decides convergence has occurred
         self.__gamma = 0.94  # the discount rate used in the Bellman equation
 
