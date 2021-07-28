@@ -54,12 +54,12 @@ When executing the program, there are some command line options that I have made
 - `-n`: the number of games the agent will play (default is 10)
 - `-p`: the penalty that is subtracted after every re-roll of the dice (default is 1)
 - `-s`: the number of sides of each dice (default is 6)
-- `-seed`: the seed for generating random numbers (default is None)
+- `--seed`: the seed for generating random numbers (default is None)
 - `-v`: the values of each side of the dice, this must be provided as a list of integers the same length as the number of sides separated only by a comma (default integers from 1 to the number of sides)
-- `-verbose`: if used, a flag is set to true and the program will output every action the agent takes during every game, which is used to see what decisions the agent makes (default if not present makes the flag false)
+- `--verbose`: if used, a flag is set to true and the program will output every action the agent takes during every game, which is used to see what decisions the agent makes (default if not present makes the flag false)
 
 An example of using each option:
 ```
-python main.py -d 6 -s 4 -v 2,4,6,8 -b 0.2,0.5,0.05,0.25 -p 2 -n 100 -seed 123 -verbose
+python main.py -d 6 -s 4 -v 2,4,6,8 -b 0.2,0.5,0.05,0.25 -p 2 -n 100 --seed 123 --verbose
 ```
 This will create a dice game with 6 dice, each with 4 sides of values 2, 4, 6 and 8, side probability weightings of 20% for value 2, 50% for value 4, 5% for value 6 and 25% for value 8 and a penalty of -2 for each re-roll. The agent will play 100 games, with 123 used as the seed for the random numbers and the action taken during each game being output.
