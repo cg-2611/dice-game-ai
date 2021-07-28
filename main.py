@@ -17,10 +17,10 @@ def get_flags():
     n_index = sys.argv.index("-n") if "-n" in sys.argv else -1
     n = int(sys.argv[n_index + 1]) if n_index != -1 else 10
 
-    seed_index = sys.argv.index("-seed") if "-seed" in sys.argv else -1
+    seed_index = sys.argv.index("--seed") if "--seed" in sys.argv else -1
     seed = int(sys.argv[seed_index + 1]) if seed_index != -1 else None
 
-    verbose = True if "-verbose" in sys.argv else False
+    verbose = True if "--verbose" in sys.argv else False
 
     return n, seed, verbose
 
@@ -104,6 +104,8 @@ def main() -> None:
     agent = dice_game_agent.DiceGameAgent(game)
     policy_iteration_end = time.process_time()
 
+    print()
+
     total_score = 0
     for i in range(1, total_games + 1):
         if verbose:
@@ -112,7 +114,7 @@ def main() -> None:
         score = play(game, agent, verbose)
         total_score += score
 
-        # print(f"Game {i} score: {score}")
+        print(f"Game {i} score: {score}")
 
         if verbose:
             print("----------------------")
