@@ -5,7 +5,7 @@ import time
 from agent import dice_game_agent
 from game import dice_game
 
-def get_flags():
+def get_flags() -> tuple:
     """
     Parse the command line arguments and search for any specified options.
 
@@ -24,7 +24,7 @@ def get_flags():
 
     return n, seed, verbose
 
-def get_dice_flags():
+def get_dice_flags() -> tuple:
     """
     Parse the command line arguments and search for any specified options for the dice.
     If an option is not specified, None is returned so that the default is used in the DiceGame constructor.
