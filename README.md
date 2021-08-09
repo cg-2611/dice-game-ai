@@ -41,7 +41,7 @@ The to run the program with default options, run:
 ```
 python main.py
 ```
-> Note: the program requires python 3.7 at a minimum and so the interpreter used to execute the program must support this version at least. The command `python3` might need to be used instead.
+> Note: the program requires python 3.9  and so the interpreter used to execute the program must support this version at least. The command `python3` might need to be used instead.
 
 
 ### Options
