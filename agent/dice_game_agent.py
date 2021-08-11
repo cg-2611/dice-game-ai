@@ -1,7 +1,7 @@
 class DiceGameAgent:
     def __init__(self, game) -> None:
         """
-        Constructor for DiceGameAgent, creates a new instance of a DiceGameAgentClass.
+        Constructor for DiceGameAgent, creates a new instance of a DiceGameAgent class.
 
         :param game: the DiceGame instance that the agent will play
         """
